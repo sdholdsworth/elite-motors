@@ -1,0 +1,91 @@
+header {
+  display: grid;
+  grid-template-areas: "homelink homelink nav-menu-btn";
+  position: sticky;
+  width: 100dvw;
+  height: min-content;
+  align-items: center;
+  /*for dark mode*/
+  background-color: #48f0d4; 
+  /*for light mode */
+  /* background-color: #646cff;*/
+  border-bottom: 1px solid #FFFFFFDE;
+}
+
+header #header-company-homelink {
+  grid-area: homelink;
+  width: max-content;
+}
+
+header #header-company-homelink #header-wheel-logo {
+  width: 4rem;
+}
+
+header #header-company-homelink #header-company-name {
+  width: 12.5rem;
+}
+
+header #nav-menu-btn {
+  grid-area: nav-menu-btn;
+  width: max-content;
+  align-self: center;
+  justify-self: flex-end;
+  padding-right: .5rem;
+}
+
+/* xs breakpoint */
+@media (min-width: 425px) {
+  header #header-company-homelink #header-company-name {
+    width: 18rem;
+  }
+}
+
+/* sm breakpoint */
+@media (min-width: 640px) {
+   header {
+    grid-template-areas: "homelink homelink homelink homelink my-garage login-status";
+   }
+
+   header #header-company-homelink #header-wheel-logo {
+    width: 5rem;
+  }
+
+  header #header-company-homelink #header-company-name {
+    width: 20.5rem;
+  }
+
+  header #my-garage {
+    grid-area: my-garage;
+    height: -webkit-fill-available;
+    justify-content: center;
+  }
+
+  header #login-status {
+    grid-area: login-status;
+    height: -webkit-fill-available;
+    justify-content: center;
+  }
+}
+
+/* md breakpoint */
+@media (min-width: 768px) {
+  header #header-company-homelink #header-wheel-logo {
+    width: 6rem;
+  }
+
+  header #header-company-homelink #header-company-name {
+    width: 24rem;
+  }
+}
+
+/* lg breakpoint */
+@media (min-width: 1024px) { 
+
+  header #header-company-homelink #header-wheel-logo {
+    width: 8rem;
+  }
+
+  header #header-company-homelink #header-company-name {
+    width: 32rem;
+  }
+}
