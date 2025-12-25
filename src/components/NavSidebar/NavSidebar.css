@@ -1,0 +1,99 @@
+.navbar-side {
+    display: grid;
+        grid-template-areas: "navbar-side-my-garage-login-status-wrapper"
+                             "navbar-side-main-nav";
+    row-gap: 2rem;
+    min-height: 100dvh;
+    width: calc(100dvw - 10%);
+    z-index: 2;
+    transition: translate var(--animation-timing);
+    translate: 100%;
+    padding: .5rem 1rem;
+    padding-top: calc(var(--nav-menu-btn-height) + 2rem);
+    background-color: var(--background-dark);
+    color: var(--text-theme-dark);
+    position: absolute;
+    left: 10%;
+    top: 0;
+    justify-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.navbar-side.hidden {
+    display: none;
+}
+
+.navbar-side.active {
+    translate: 0;
+    transition: translate var(--animation-timing);
+    overflow: hidden;
+}
+
+#navbar-side-my-garage-login-status-wrapper {
+    display: grid;
+    grid-area: navbar-side-my-garage-login-status-wrapper;
+    grid-template-areas: "navbar-side-my-garage navbar-side-login-status";
+    width: inherit;
+    height: max-content;
+    column-gap: 1.5rem;
+    justify-content: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+#navbar-side-my-garage {
+    grid-area: navbar-side-my-garage;
+}
+
+#navbar-side-my-garage a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar-side-my-garage p {
+    margin-bottom: .5rem;
+}
+
+#navbar-side-my-garage img {
+    max-width: 180px;
+}
+
+#navbar-side-login-status {
+    grid-area: navbar-side-login-status;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#navbar-side-not-logged-in,
+#navbar-side-logged-in {
+    width: max-content;
+}
+
+#navbar-side-not-logged-in p:first-of-type {
+    margin-bottom: 1rem;
+}
+
+#navbar-side-not-logged-in a,
+#navbar-side-logged-in a {
+    display: flex;   
+    flex-direction: row; 
+    column-gap: .5rem;
+}
+
+#navbar-side-not-logged-in img,
+#navbar-side-logged-in img {
+    width: 1.735rem;
+}
+
+#navbar-side-main-nav {
+    grid-area: navbar-side-main-nav;
+}
+
+.nav-sidebar-link-item {
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0 1.5rem;
+}
