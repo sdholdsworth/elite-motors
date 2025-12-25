@@ -1,7 +1,7 @@
 .navbar-side {
     display: grid;
-        grid-template-areas: "navbar-side-my-garage-login-status-wrapper"
-                             "navbar-side-main-nav";
+    grid-template-areas: "navbar-side-my-garage-login-status-wrapper"
+                         "navbar-side-main-nav";
     row-gap: 2rem;
     min-height: 100dvh;
     width: calc(100dvw - 10%);
