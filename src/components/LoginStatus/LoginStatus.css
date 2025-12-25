@@ -1,0 +1,66 @@
+.login-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 .5em;
+    color: #242424;
+    font-size: 16px;
+}
+
+.login-status.hidden {
+    display: none;
+}
+
+.login-status #not-logged-in {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.login-status #not-logged-in p:first-of-type {
+    margin-bottom: .75rem;
+}
+
+.login-status #not-logged-in.hidden {
+    display: none;
+}
+
+.login-status #logged-in {
+    display: flex;
+    width: max-content;
+}
+
+.login-status #logged-in.hidden {
+    display: none;
+}
+
+.login-status #not-logged-in a,
+.login-status #logged-in a {
+    display: flex;   
+    flex-direction: row; 
+    column-gap: .5rem;
+}
+
+.login-status #not-logged-in img,
+.login-status #logged-in img {
+    width: 1.625rem;
+}
+
+.login-status #logged-in.hidden {
+    display: none;
+}
+
+.login-status p {
+    color: #242424;
+}
+
+.login-status p a {
+    color: #242424;
+    text-decoration: none;
+}
+
+.login-status a:hover,
+.login-status a:active {
+    color: #535bf2;
+    text-decoration: underline;
+}
