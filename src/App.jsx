@@ -14,18 +14,25 @@ const App = () => {
         const headerNavMenuBtnInput = document.querySelector("#nav-menu-btn input");
         const navSideBar = document.querySelector("#navbar-side");
         const navBar = document.querySelector("#navbar");
+        const mainContentArea = document.querySelector("main");
+        
+        const headerHeight = document.querySelector("header").offsetHeight;
+        const navBarHeight = document.querySelector("#navbar").offsetHeight;
+        const footerHeight = document.querySelector("footer").offsetHeight;
 
         if (window.innerWidth < 640) {
             headerMyGarage.classList.add("hidden");
             headerLoginStatus.classList.add("hidden");
             headerNavMenuBtn.classList.remove("hidden");
             navBar.classList.add("hidden");
+            mainContentArea.style.minHeight = `calc(100dvh - ${headerHeight}px - ${footerHeight}px)`;
         } else {
             headerMyGarage.classList.remove("hidden");
             headerLoginStatus.classList.remove("hidden");
             headerNavMenuBtn.classList.add("hidden");
             navBar.classList.remove("hidden");
             navSideBar.classList.add("hidden");
+            mainContentArea.style.minHeight = `calc(100dvh - ${headerHeight}px - ${navBarHeight}px - ${footerHeight}px)`;
 
             if(headerNavMenuBtnInput.checked) {
               headerNavMenuBtnInput.checked = false;
