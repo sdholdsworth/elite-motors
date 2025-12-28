@@ -15,6 +15,8 @@ const App = () => {
         const navSideBar = document.querySelector("#navbar-side");
         const navBar = document.querySelector("#navbar");
         const mainContentArea = document.querySelector("main");
+        const body = document.querySelector("body");
+        const themeToggleDropDownMenu = document.querySelector("#theme-toggle-dropdown");
         
         const headerHeight = document.querySelector("header").offsetHeight;
         const navBarHeight = document.querySelector("#navbar").offsetHeight;
@@ -26,6 +28,7 @@ const App = () => {
             headerNavMenuBtn.classList.remove("hidden");
             navBar.classList.add("hidden");
             mainContentArea.style.minHeight = `calc(100dvh - ${headerHeight}px - ${footerHeight}px)`;
+            themeToggleDropDownMenu.classList.add("hidden");
         } else {
             headerMyGarage.classList.remove("hidden");
             headerLoginStatus.classList.remove("hidden");
@@ -36,6 +39,10 @@ const App = () => {
 
             if(headerNavMenuBtnInput.checked) {
               headerNavMenuBtnInput.checked = false;
+            }
+
+            if(body.classList.contains("prevent-scroll")) {
+              body.classList.remove("prevent-scroll")
             }
         }
     }
