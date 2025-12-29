@@ -51,18 +51,18 @@
 }
 
 .login-status p {
-    color: #242424;
+    color: var(--text-dark);
     font-size: 1rem;
 }
 
 .login-status p a {
-    color: #242424;
+    color: var(--text-dark);
     text-decoration: none;
     font-size: 1rem;
 }
 
 .login-status a:hover,
 .login-status a:active {
-    color: #535bf2;
+    color: (--text-theme-light);
     text-decoration: underline;
 }
