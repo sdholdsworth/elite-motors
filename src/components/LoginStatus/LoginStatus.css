@@ -52,11 +52,13 @@
 
 .login-status p {
     color: #242424;
+    font-size: 1rem;
 }
 
 .login-status p a {
     color: #242424;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .login-status a:hover,
