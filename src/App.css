@@ -1,11 +1,14 @@
 #root {
   min-height: 100dvh;
   padding: 0;
+  
+  /* background: var(--background-light);
+  color: var(--text-dark); */
 }
 
 #root main {
   padding: 1em;
-  padding-bottom: 3em; /* to prevent content from being hidden behind the footer */
+  padding-bottom: 3em;
 }
 
 button {
