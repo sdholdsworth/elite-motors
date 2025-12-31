@@ -6,10 +6,11 @@ header {
   height: min-content;
   align-items: center;
   /*for dark mode*/
-  background-color: #48f0d4; 
-  /*for light mode */
-  /* background-color: #646cff;*/
-  border-bottom: 1px solid #FFFFFFDE;
+  background-color: var(--text-theme-dark);
+  border-bottom: 1px solid var(--border-light);
+  /*for light mode */ 
+  /* background-color: var(--text-theme-light); */
+  /* border-bottom: 1px solid var(--border-dark); */
 }
 
 header #header-company-homelink {
