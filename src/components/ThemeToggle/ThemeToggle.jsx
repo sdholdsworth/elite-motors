@@ -4,7 +4,13 @@ export const ThemeToggle = () => {
 
     //show/hide theme mode options    
     const themeToggleMenu = () => {
-        document.querySelector('#theme-toggle-dropdown').classList.toggle("hidden");
+        
+        const themeToggleBtn = document.querySelector("#theme-toggle-btn");
+        const themeToggleDropDownMenu = document.querySelector("#theme-toggle-dropdown");
+        
+        themeToggleDropDownMenu.classList.toggle("hidden");
+
+        themeToggleDropDownMenu.classList.contains("hidden") ? themeToggleBtn.setAttribute("aria-expanded", "false") : themeToggleBtn.setAttribute("aria-expanded", "true");
     }
 
     return (
