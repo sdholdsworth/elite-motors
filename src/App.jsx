@@ -56,14 +56,14 @@ const App = () => {
     };
 
   return (
-    <>
+    <div id="app">
       <Header />
       <Navbar />      
       <main>
         <Home />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
