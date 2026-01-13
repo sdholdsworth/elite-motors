@@ -31,5 +31,9 @@
   --nav-menu-btn-bar-height: .375rem;
   --nav-menu-btn-bar-gap: .25rem;
   --nav-menu-btn-height: calc(var(--nav-menu-btn-bar-height) * 3 + var(--nav-menu-btn-bar-gap) * 2);
-  --animation-timing: 150ms ease-in-out;
+  --animation-timing-faster: 50ms ease-in-out;
+  --animation-timing-fast: 100ms ease-in-out;
+  --animation-timing-default: 150ms ease-in-out;
+  --animation-timing-slow: 200ms ease-in-out;
+  --animation-timing-slower: 250ms ease-in-out;
 }

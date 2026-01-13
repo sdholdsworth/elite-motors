@@ -53,14 +53,14 @@ a {
   text-decoration: none;
   padding: .1em;
   opacity: 1;
-  transition: opacity var(--animation-timing) text-decoration var(--animation-timing);
+  transition: opacity var(--animation-timing-default) text-decoration var(--animation-timing-default);
 }
 
 a:hover,
 a:active {
   text-decoration: underline;
   opacity: .65;
-  transition: opacity var(--animation-timing), text-decoration var(--animation-timing);
+  transition: opacity var(--animation-timing-default), text-decoration var(--animation-timing-default);
 }
 
 .sub-header-context {
