@@ -1,13 +1,13 @@
 #social-media-links a {
     width: 3.125rem;
     opacity: 1;
-    transition: width var(--animation-timing), 
-                opacity var(--animation-timing);
+    transition: width var(--animation-timing-faster), 
+                opacity var(--animation-timing-faster);
 }
 
 #social-media-links a:hover {
     width: 2.875rem;
     opacity: 0.6;
-    transition: width var(--animation-timing), 
-                opacity var(--animation-timing);
+    transition: width var(--animation-timing-faster), 
+                opacity var(--animation-timing-faster);
 }
