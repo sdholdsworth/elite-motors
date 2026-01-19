@@ -19,7 +19,7 @@ export const NavMenuBtn = () => {
     }
 
     return (
-        <label id="nav-menu-btn" className="nav-menu-btn" onChange={handleShowHideSidebarNavigation} >       
+        <label id="nav-menu-btn" className="nav-menu-btn" onChange={handleShowHideSidebarNavigation}>   
             <input type="checkbox"/>
         </label>
     )

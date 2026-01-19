@@ -1,28 +1,17 @@
 import './ThemeToggle.css';
+import { useId } from 'react';
 
-export const ThemeToggle = () => {
-
-    //show/hide theme mode options    
-    const themeToggleMenu = () => {
-        
-        const themeToggleBtn = document.querySelector("#theme-toggle-btn");
-        const themeToggleDropDownMenu = document.querySelector("#theme-toggle-dropdown");
-        
-        themeToggleDropDownMenu.classList.toggle("hidden");
-
-        themeToggleDropDownMenu.classList.contains("hidden") ? themeToggleBtn.setAttribute("aria-expanded", "false") : themeToggleBtn.setAttribute("aria-expanded", "true");
-    }
+export const ThemeToggle = ({handleThemeToggle, isChecked}) => {
+    
+    const id = useId(); //helper method to help generate unique id for each use case
 
     return (
-        <aside id="theme-toggle-wrapper" className="p-1 flex flex-row flex-grow-0 items-center justify-end h-min">
-            <button id="theme-toggle-btn" className="flex flex-row flex-nowrap" aria-label="toggle colour theme" aria-expanded="false" aria-controls="theme-toggle-dropdown" onClick={themeToggleMenu}>Theme</button>
-            <div id="theme-toggle-dropdown" className="theme-toggle-dropdown-menu hidden">
-                <ul>
-                    <li><button id="os-default" className="flex flex-row flex-nowrap" type="button">System</button></li>
-                    <li><button id="light-mode" className="flex flex-row flex-nowrap" type="button">Light</button></li>
-                    <li><button id="dark-mode" className="flex flex-row flex-nowrap" type="button">Dark</button></li>
-                </ul>
-            </div>  
-        </aside>
+        <div className="theme-toggle-container" aria-describedby={`toggle-theme-description${id}`} role="switch" tabIndex="0" aria-checked={isChecked ? true : false}>
+            <span id={`toggle-theme-description${id}`} className="screen-reader-only">toggle between light and dark theme settings</span>
+            <img className="light-mode-icon" src={isChecked ? "src/assets/theme/dark-mode-theme-light.svg" : "src/assets/theme/light-mode-theme-light.svg"} alt=""></img>
+            <input id={`theme-toggle-switch${id}`} className="theme-toggle-switch" type="checkbox" onChange={handleThemeToggle} checked={isChecked}></input>
+            <label htmlFor={`theme-toggle-switch${id}`} aria-hidden="true"></label>
+            <img className="dark-mode-icon" src={isChecked ? "src/assets/theme/dark-mode-theme-dark.svg" : "src/assets/theme/light-mode-theme-dark.svg"} alt=""></img>
+        </div>
     )
 }

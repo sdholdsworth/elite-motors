@@ -5,20 +5,21 @@ import { LoginStatus } from '../LoginStatus/LoginStatus'
 import { NavMenuBtn } from '../NavMenuBtn/NavMenuBtn'
 import { NavSidebar } from '../NavSidebar/NavSidebar'
 import './Header.css'
+import '../../App'
 
-export const Header = () => {
-
+export const Header = ({ isDark, setIsDark }) => {
     return (   
         <header>
-            <a id="header-company-homelink" href="/" className="flex flex-row">
-                <img id="header-wheel-logo" src={wheelLogo} className="" alt="home shortcut logo"></img>
-                <img id="header-company-name" src={projectTitle} className="" alt="home shortcut logo"></img>
-            </a>
-            
+            <div id="header-company-wrapper">
+                <a id="header-company-homelink" href="/" className="flex flex-row">
+                    <img id="header-wheel-logo" src={wheelLogo} className="" alt="link to homepage"></img>
+                </a>
+                <img id="header-company-name" src={projectTitle} alt="elite motors"></img>
+            </div>
             <MyGarage />
-            <LoginStatus />
+            <LoginStatus isDark={isDark} />
             <NavMenuBtn />
-            <NavSidebar />       
+            <NavSidebar isDark={isDark} setIsDark={setIsDark} />       
         </header>
     )
 }

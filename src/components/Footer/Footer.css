@@ -1,28 +1,27 @@
 footer {
-  width: 100dvw;
   position: relative;
   bottom: 0;
   left: 0;
-  /*for dark mode*/
-  background-color: var(--text-theme-dark); 
-  /*for light mode */ 
-  /* background-color: var(--text-theme-light); */
 }
 
 footer nav a {
   font-weight: 600;
-  color: #242424;
-  text-decoration: none;
-}
-
-footer nav a:hover,
-footer nav a:active {
-  text-decoration: underline;
 }
 
 footer p {
   width: fit-content;
   font-size: 14px;
   text-align: center;
-  color: #242424;
+}
+
+#app[data-theme="light"] footer {
+  background-color: var(--theme-colour-light-mode);
+  color: var(--text-light);
+  transition: background-color var(--animation-timing-slower), color var(--animation-timing-slower);
+}
+
+#app[data-theme="dark"] footer {
+  background-color: var(--theme-colour-dark-mode);
+  color: var(--text-dark);
+  transition: background-color var(--animation-timing-slower), color var(--animation-timing-slower);
 }

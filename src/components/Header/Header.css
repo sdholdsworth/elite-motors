@@ -1,16 +1,28 @@
 header {
   display: grid;
-  grid-template-areas: "homelink homelink nav-menu-btn";
+  grid-template-areas: "homelink title title . nav-menu-btn";
   position: sticky;
-  width: 100dvw;
   height: min-content;
   align-items: center;
-  /*for dark mode*/
-  background-color: var(--text-theme-dark);
+}
+
+#app[data-theme="light"] header {
+  background-color: var(--theme-colour-light-mode);
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border-dark);
+  transition: background-color var(--animation-timing-slower), color var(--animation-timing-slower), border-bottom var(--animation-timing-slower);
+}
+
+#app[data-theme="dark"] header { 
+  background-color: var(--theme-colour-dark-mode);
+  color: var(--text-dark);
   border-bottom: 1px solid var(--border-light);
-  /*for light mode */ 
-  /* background-color: var(--text-theme-light); */
-  /* border-bottom: 1px solid var(--border-dark); */
+  transition: background-color var(--animation-timing-slower), color var(--animation-timing-slower), border-bottom var(--animation-timing-slower);
+}
+
+header #header-company-wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 header #header-company-homelink {
@@ -22,7 +34,8 @@ header #header-company-homelink #header-wheel-logo {
   width: 4rem;
 }
 
-header #header-company-homelink #header-company-name {
+header #header-company-name {
+  grid-area: title;
   width: 12.5rem;
 }
 
@@ -30,28 +43,28 @@ header #nav-menu-btn {
   grid-area: nav-menu-btn;
   width: max-content;
   align-self: center;
-  justify-self: flex-end;
+  justify-self: center;
   padding-right: .5rem;
 }
 
 /* xs breakpoint */
 @media (min-width: 425px) {
-  header #header-company-homelink #header-company-name {
-    width: 18rem;
+  header #header-company-name {  
+  width: 18rem;
   }
 }
 
 /* sm breakpoint */
 @media (min-width: 640px) {
    header {
-    grid-template-areas: "homelink homelink homelink homelink my-garage login-status";
+    grid-template-areas: "homelink title title title my-garage login-status";
    }
 
    header #header-company-homelink #header-wheel-logo {
     width: 5rem;
   }
 
-  header #header-company-homelink #header-company-name {
+  header #header-company-name {
     width: 20.5rem;
   }
 
@@ -74,19 +87,18 @@ header #nav-menu-btn {
     width: 6rem;
   }
 
-  header #header-company-homelink #header-company-name {
-    width: 24rem;
+  header #header-company-name {
+    width: 26rem;
   }
 }
 
 /* lg breakpoint */
 @media (min-width: 1024px) { 
-
   header #header-company-homelink #header-wheel-logo {
     width: 8rem;
   }
 
-  header #header-company-homelink #header-company-name {
-    width: 32rem;
+  header #header-company-name {
+    width: 34rem;
   }
 }

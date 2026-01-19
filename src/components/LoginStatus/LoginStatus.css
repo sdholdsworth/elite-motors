@@ -3,8 +3,15 @@
     flex-direction: column;
     align-items: center;
     padding: 0 .5em;
-    color: #242424;
-    font-size: 16px;
+    font-size: 1rem;
+}
+
+#app[data-theme="light"] .login-status {
+    color: var(--text-light);
+}
+
+#app[data-theme="dark"] .login-status {
+    color: var(--text-dark);
 }
 
 .login-status.hidden {
@@ -51,18 +58,9 @@
 }
 
 .login-status p {
-    color: var(--text-dark);
     font-size: 1rem;
 }
 
 .login-status p a {
-    color: var(--text-dark);
-    text-decoration: none;
     font-size: 1rem;
-}
-
-.login-status a:hover,
-.login-status a:active {
-    color: (--text-theme-light);
-    text-decoration: underline;
 }

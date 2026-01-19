@@ -1,9 +1,54 @@
+@import "tailwindcss";
+
+:root {
+
+  /* typography */
+  font-family:  "Exo 2", system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  --border-light: #f9f9f9;
+  --text-light: #f9f9f9;
+  --border-dark: #242424;
+  --text-dark: #242424;
+
+  /* mobile nav menu vars */
+  --nav-menu-btn-bar-width: 2rem;
+  --nav-menu-btn-bar-height: .375rem;
+  --nav-menu-btn-bar-gap: .25rem;
+  --nav-menu-btn-height: calc(var(--nav-menu-btn-bar-height) * 3 + var(--nav-menu-btn-bar-gap) * 2);
+  --animation-timing-faster: 50ms ease-in-out;
+  --animation-timing-fast: 100ms ease-in-out;
+  --animation-timing-default: 150ms ease-in-out;
+  --animation-timing-slow: 200ms ease-in-out;
+  --animation-timing-slower: 250ms ease-in-out;
+}
+
+[data-theme="light"] {
+  --background-light: #f9f9f9;
+  --background-light-hover: #dcdcdc4a;
+  --theme-colour-light-mode: #540cf7;
+}
+
+[data-theme="dark"] {
+  --background-dark: #242424;
+  --background-dark-hover: #39393999;
+  --theme-colour-dark-mode: #0efdd5;
+}
+
 #root {
   min-height: 100dvh;
   padding: 0;
 }
 
 #root main {
+  font-weight: 300;
   padding: 1em;
   padding-bottom: 3em;
 }
@@ -15,12 +60,11 @@ button {
   cursor: pointer;
   padding: .25em .5em;
   opacity: 1;
-  
 }
 
 button:hover,
 button:active {
-  opacity: .65;
+  opacity: .75;
 }
 button:focus,
 button:focus-visible {
@@ -29,7 +73,7 @@ button:focus-visible {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 0.25em;
 }
 
@@ -59,7 +103,7 @@ a {
 a:hover,
 a:active {
   text-decoration: underline;
-  opacity: .65;
+  opacity: .75;
   transition: opacity var(--animation-timing-default), text-decoration var(--animation-timing-default);
 }
 
@@ -73,42 +117,53 @@ a:active {
   overflow: hidden;
 }
 
-#app {
-  background: var(--background-dark);
-  color: var(--theme-colour-dark-mode);
+.screen-reader-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
+  clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
+  white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 }
 
-@media (prefers-color-scheme: light) {
-  #app {
-    background: var(--background-light);
-    color: var(--text-dark);
-  }
+#app[data-theme="light"] {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  transition: background-color var(--animation-timing-slower), color var(--animation-timing-slower);
 
   button {
-    background: var(--background-light);
+    background-color: var(--background-light);
     border: 1px solid var(--theme-colour-light-mode);
+    transition: background-color var(--animation-timing-slower), border var(--animation-timing-slower);
   }
 
   button:hover,
   button:active {
-    background: var(--background-light-hover);
+    background-color: var(--background-light-hover);
+    transition: background-color var(--animation-timing-default);
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  #app {
-    background: var(--background-dark);
-    color: var(--text-light);
-  }
+#app[data-theme="dark"] {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  transition: background-color var(--animation-timing-slower), color var(--animation-timing-slower);
 
   button {
-    background: var(--background-dark);
+    background-color: var(--background-dark);
     border: 1px solid var(--theme-colour-dark-mode);
+    transition: background-color var(--animation-timing-slower), border var(--animation-timing-slower);
   }
 
   button:hover,
   button:active {
-    background: var(--background-dark-hover);
+    background-color: var(--background-dark-hover);
+    transition: background-color var(--animation-timing-default);
   }
 }
 
@@ -133,11 +188,10 @@ a:active {
   p, a {
     font-size: 1.125rem;
   }
-
 }
 
 /* lg breakpoint */
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
   #root main {
     padding: 2em 10vw 3em;
   }

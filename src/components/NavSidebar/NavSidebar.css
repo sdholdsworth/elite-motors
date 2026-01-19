@@ -1,17 +1,17 @@
 .navbar-side {
     display: grid;
     grid-template-areas: "navbar-side-my-garage-login-status-wrapper"
+                         "nabar-side-toggle-theme"
                          "navbar-side-main-nav";
     row-gap: 2rem;
     min-height: 100dvh;
     width: calc(100dvw - 10%);
     z-index: 2;
-    transition: translate var(--animation-timing);
+    /* z-index: 1; */
+    transition: translate var(--animation-timing-default);
     translate: 100%;
     padding: .5rem 1rem;
     padding-top: calc(var(--nav-menu-btn-height) + 2rem);
-    background-color: var(--background-dark);
-    color: var(--text-theme-dark);
     position: absolute;
     left: 10%;
     top: 0;
@@ -20,13 +20,23 @@
     justify-content: space-between;
 }
 
+#app[data-theme="light"] .navbar-side {
+    background-color: var(--background-light);
+    color: var(--theme-colour-light-mode);
+}
+
+#app[data-theme="dark"] .navbar-side {
+    background-color: var(--background-dark);
+    color: var(--theme-colour-dark-mode);
+}
+
 .navbar-side.hidden {
     display: none;
 }
 
 .navbar-side.active {
     translate: 0;
-    transition: translate var(--animation-timing);
+    transition: translate var(--animation-timing-default);
     overflow: hidden;
 }
 
@@ -45,6 +55,7 @@
 #navbar-side-my-garage {
     grid-area: navbar-side-my-garage;
 }
+
 
 #navbar-side-my-garage a {
     display: flex;
@@ -88,12 +99,25 @@
     width: 1.735rem;
 }
 
+#navbar-side .navbar-side-theme-toggle-wrapper {
+    grid-area: nabar-side-toggle-theme;
+    width: inherit;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#navbar-side .navbar-side-theme-toggle-wrapper .theme-toggle-container {
+    left: 0;
+    transform: translateX(0);
+}
+
 #navbar-side-main-nav {
     grid-area: navbar-side-main-nav;
 }
 
 .nav-sidebar-link-item {
-    text-decoration: none;
+    width: max-content;
     display: block;
-    padding: 0.25rem 0 1.5rem;
+    margin-top: .25rem;
+    margin-bottom: 1.5rem;
 }
