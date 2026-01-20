@@ -4,10 +4,9 @@
                          "nabar-side-toggle-theme"
                          "navbar-side-main-nav";
     row-gap: 2rem;
-    min-height: 100dvh;
+    height: 100dvh;
     width: calc(100dvw - 10%);
     z-index: 2;
-    /* z-index: 1; */
     transition: translate var(--animation-timing-default);
     translate: 100%;
     padding: .5rem 1rem;
