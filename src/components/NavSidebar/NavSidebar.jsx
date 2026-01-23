@@ -2,7 +2,6 @@ import './NavSidebar.css';
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 import '../../App'
 
-
 export const NavSidebar = ({ isDark, setIsDark }) => {
     return (
         <aside id="navbar-side" className="navbar-side hidden">

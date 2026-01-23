@@ -1,0 +1,37 @@
+.page-heading-wrapper {
+    display: grid;
+    grid-template-areas: "page-heading-icon page-heading" 
+                         ". page-heading-sub-context";
+    column-gap: 1em;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
+.page-heading-icon {
+    grid-area: page-heading-icon;
+    width: 60px;
+}
+
+.page-heading {
+    grid-area: page-heading;
+}
+
+.page-heading-sub-context {
+    grid-area: page-heading-sub-context;
+}
+
+/* sm breakpoint */
+@media (min-width: 640px) {
+    .page-heading-icon {
+        width: 76px;
+    }
+}
+
+/* lg breakpoint */
+@media (min-width: 1024px) {
+    .page-heading-icon {
+        width: 96px;
+    }
+}
