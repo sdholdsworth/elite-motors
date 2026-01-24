@@ -1,4 +1,5 @@
 import './App.css'
+import { Routes, Route } from 'react-router'
 import useLocalStorage from 'use-local-storage'
 import { Header } from './components/Header/Header'
 import { Navbar } from './components/Navbar/Navbar'
@@ -72,16 +73,18 @@ const App = () => {
       <Header isDark={isDark} setIsDark={setIsDark} />
       <Navbar isDark={isDark} setIsDark={setIsDark} />
       <main>
-        <Page_Home isDark={isDark} />
-        <Page_Cars isDark={isDark} />
-        <Page_VansPickups isDark={isDark} />
-        <Page_Bikes isDark={isDark} />
-        <Page_About isDark={isDark} />
-        <Page_RatingsReviews isDark={isDark} />
-        <Page_Contact isDark={isDark} />
-        <Page_MyGarage isDark={isDark} />
-        <Page_Login isDark={isDark} />
-        <Page_Register isDark={isDark} />
+        <Routes>
+          <Route index element={<Page_Home isDark={isDark} />} />
+          <Route path="/cars" element={<Page_Cars isDark={isDark} />} />
+          <Route path="/vans-and-pickups" element={<Page_VansPickups isDark={isDark} />} />
+          <Route path="/bikes" element={<Page_Bikes isDark={isDark} />} />
+          <Route path="/about" element={<Page_About isDark={isDark} />} />
+          <Route path="/ratings-and-reviews" element={<Page_RatingsReviews isDark={isDark} />} />
+          <Route path="/contact" element={<Page_Contact isDark={isDark} />} />
+          <Route path="/my-garage" element={<Page_MyGarage isDark={isDark} />} />
+          <Route path="/login" element={<Page_Login isDark={isDark} />} />
+          <Route path="/register" element={<Page_Register isDark={isDark} />} />
+         </Routes>
       </main>
       <Footer />
     </div>
