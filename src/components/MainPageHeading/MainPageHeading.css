@@ -5,8 +5,8 @@
     column-gap: 1em;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 2em;
-    margin-bottom: 4em;
+    margin-top: .5em;
+    margin-bottom: 3em;
 }
 
 .page-heading-icon {
@@ -24,6 +24,10 @@
 
 /* sm breakpoint */
 @media (min-width: 640px) {
+    .page-heading-wrapper {
+        margin-top: 1em;
+    }
+
     .page-heading-icon {
         width: 76px;
     }
