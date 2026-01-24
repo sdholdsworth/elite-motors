@@ -84,7 +84,7 @@ const App = () => {
           <Route path="/my-garage" element={<Page_MyGarage isDark={isDark} />} />
           <Route path="/login" element={<Page_Login isDark={isDark} />} />
           <Route path="/register" element={<Page_Register isDark={isDark} />} />
-         </Routes>
+        </Routes>
       </main>
       <Footer />
     </div>
