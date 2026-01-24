@@ -4,7 +4,7 @@
                          ". page-heading-sub-context";
     column-gap: 1em;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     margin-top: .5em;
     margin-bottom: 3em;
 }
