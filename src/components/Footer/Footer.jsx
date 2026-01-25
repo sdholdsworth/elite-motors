@@ -1,4 +1,4 @@
-import { NavLink } from "react-router"
+import { NavLink } from 'react-router'
 import "./Footer.css"
 import { SocialMediaLinks } from "../SocialMediaLinks/SocialMediaLinks"
 

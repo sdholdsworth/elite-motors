@@ -5,7 +5,7 @@ export const MainPageHeading = ({isDark, pageHeadingIconLightMode, pageHeadingIc
 return (
         <section className="page-heading-wrapper">
             <img src={isDark ? pageHeadingIconDarkMode : pageHeadingIconLightMode} alt="" className="page-heading-icon"></img>
-            <h1 id="main-content" className="page-heading">{pageHeading}</h1>
+            <h1 id="main-content" className="page-heading" tabIndex="-1">{pageHeading}</h1>
             <p className="page-heading-sub-context">{pageHeadingSubContext}</p>
         </section>
     )

@@ -1,6 +1,7 @@
 import './App.css'
 import { Routes, Route } from 'react-router'
 import useLocalStorage from 'use-local-storage'
+import { SkipToContent } from './components/SkipToContent/SkipToContent'
 import { Header } from './components/Header/Header'
 import { Navbar } from './components/Navbar/Navbar'
 import { Footer } from './components/Footer/Footer'
@@ -60,7 +61,7 @@ const App = () => {
   window.onresize = () => {
     configureResponsiveSiteLayout();
   };
-  
+
   //determine layout on load
   window.onload = () => {
     configureResponsiveSiteLayout();
@@ -71,6 +72,7 @@ const App = () => {
 
   return (
     <div id="app" data-theme={isDark ? "dark" : "light"}>
+      <SkipToContent isDark={isDark} />
       <Header isDark={isDark} setIsDark={setIsDark} />
       <Navbar isDark={isDark} setIsDark={setIsDark} />
       <main>
