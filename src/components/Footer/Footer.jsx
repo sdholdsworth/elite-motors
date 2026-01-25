@@ -1,3 +1,4 @@
+import { NavLink } from "react-router"
 import "./Footer.css"
 import { SocialMediaLinks } from "../SocialMediaLinks/SocialMediaLinks"
 
@@ -5,9 +6,9 @@ export const Footer = () => {
     return(
         <footer className="p-2 flex flex-col items-center">
             <nav id="footer-nav" className="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:gap-y-0 sm:gap-x-4 sm:justify-center">
-                <a href="/about">About</a>
-                <a href="/ratings-and-reviews">Ratings and Reviews</a>
-                <a href="/contact">Contact</a>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/ratings-and-reviews">Ratings and Reviews</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
             </nav>
             <div id="footer-legal-info" className="flex flex-col items-center my-2">
                 <p>Copyright<sup>&copy;</sup> Elite-Motors Ltd</p>

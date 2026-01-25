@@ -60,6 +60,7 @@ const App = () => {
   window.onresize = () => {
     configureResponsiveSiteLayout();
   };
+  
   //determine layout on load
   window.onload = () => {
     configureResponsiveSiteLayout();

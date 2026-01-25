@@ -1,3 +1,4 @@
+import { NavLink, Link } from 'react-router';
 import './NavSidebar.css';
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 import '../../App'
@@ -7,18 +8,18 @@ export const NavSidebar = ({ isDark, setIsDark }) => {
         <aside id="navbar-side" className="navbar-side hidden">
             <div id="navbar-side-my-garage-login-status-wrapper">
                 <div id="navbar-side-my-garage">
-                    <a href="/my-garage">
+                    <Link to="/my-garage">
                         <p>My Garage</p>
                         <img src="/src/assets/my-garage-icon.svg" alt="" />
-                    </a>
+                    </Link>
                 </div>
                 <div id="navbar-side-login-status">
                     <div id="navbar-side-not-logged-in">
-                        <p><a href="/login"><img src={isDark ? "src/assets/navbar-side-user-icon-dark-mode.png" : "src/assets/navbar-side-user-icon-light-mode.png"} alt=""/>Login</a></p>
-                        <p><a href="/register"><img src={isDark ? "src/assets/navbar-side-register-icon-dark-mode.png" : "src/assets/navbar-side-register-icon-light-mode.png"} alt=""/>Register</a></p>
+                        <p><Link to="/login"><img src={isDark ? "src/assets/navbar-side-user-icon-dark-mode.png" : "src/assets/navbar-side-user-icon-light-mode.png"} alt=""/>Login</Link></p>
+                        <p><Link to="/register"><img src={isDark ? "src/assets/navbar-side-register-icon-dark-mode.png" : "src/assets/navbar-side-register-icon-light-mode.png"} alt=""/>Register</Link></p>
                     </div>
                     <div id="navbar-side-logged-in" className="hidden">
-                        <p><a href="/"><img src={isDark ? "src/assets/navbar-side-user-icon-dark-mode.png" : "src/assets/navbar-side-user-icon-light-mode.png"} alt=""/>Sign Out</a></p>
+                        <p><Link to="/"><img src={isDark ? "src/assets/navbar-side-user-icon-dark-mode.png" : "src/assets/navbar-side-user-icon-light-mode.png"} alt=""/>Sign Out</Link></p>
                     </div>
                 </div>   
             </div>
@@ -27,10 +28,10 @@ export const NavSidebar = ({ isDark, setIsDark }) => {
             </div>
             <nav id="navbar-side-main-nav" className="p-1">
                 <ul>
-                    <li className="nav-sidebar-link-item"><a href="/">Home</a></li>
-                    <li className="nav-sidebar-link-item"><a href="/cars">Cars</a></li>
-                    <li className="nav-sidebar-link-item"><a href="/vans-and-pickups">Vans and Pickups</a></li>
-                    <li className="nav-sidebar-link-item"><a href="/bikes">Bikes</a></li>
+                    <li className="nav-sidebar-link-item"><NavLink to="/">Home</NavLink></li>
+                    <li className="nav-sidebar-link-item"><NavLink to="/cars">Cars</NavLink></li>
+                    <li className="nav-sidebar-link-item"><NavLink to="/vans-and-pickups">Vans and Pickups</NavLink></li>
+                    <li className="nav-sidebar-link-item"><NavLink to="/bikes">Bikes</NavLink></li>
                 </ul>
             </nav>
         </aside>
