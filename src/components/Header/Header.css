@@ -2,6 +2,7 @@ header {
   display: grid;
   grid-template-areas: "homelink title title . nav-menu-btn";
   position: sticky;
+  top: 0;
   height: min-content;
   align-items: center;
 }

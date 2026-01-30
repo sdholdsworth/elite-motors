@@ -67,6 +67,13 @@ const App = () => {
     configureResponsiveSiteLayout();
   };
 
+  //determine the offset position of the sticky navbar on scroll 
+  window.onscroll = () => {
+    const headerHeight = document.querySelector("header").offsetHeight;
+    const navBar = document.querySelector("#navbar");
+    navBar.style.top = `calc(0px + ${headerHeight}px)`;
+  }
+
   const pefersColourSchemeDefault = window.matchMedia("(prefers-color-scheme: light)").matches;
   const [isDark, setIsDark] = useLocalStorage("isDark", pefersColourSchemeDefault);
 

@@ -5,15 +5,17 @@
   align-items: center;
   height: min-content;
   padding: .25em 1em;
-  position: relative;
+  position: sticky;
 }
 
 #app[data-theme="light"] .navbar-wrapper {
+  background-color: var(--background-light);
   color: var(--theme-colour-light-mode);
   border-bottom: 1px solid var(--border-dark);
 }
 
 #app[data-theme="dark"] .navbar-wrapper {
+  background-color: var(--background-dark);
   color: var(--theme-colour-dark-mode);
   border-bottom: 1px solid var(--border-light);
 }
