@@ -99,6 +99,7 @@ a {
   padding: .1em;
   opacity: 1;
   transition: opacity var(--animation-timing-default) text-decoration var(--animation-timing-default);
+  cursor: pointer;
 }
 
 a:hover,
