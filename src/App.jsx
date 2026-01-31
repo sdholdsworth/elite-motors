@@ -1,5 +1,5 @@
 import './App.css'
-import { Routes, Route } from 'react-router'
+import { Routes, Route, HashRouter } from 'react-router'
 import useLocalStorage from 'use-local-storage'
 import { SkipToContent } from './components/SkipToContent/SkipToContent'
 import { Header } from './components/Header/Header'
