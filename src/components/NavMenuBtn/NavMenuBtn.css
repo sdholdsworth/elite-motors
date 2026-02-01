@@ -59,10 +59,7 @@
         background-color: var(--background-light);
     }
 
-    .nav-menu-btn:has(input:checked)::before {
-        background-color: var(--theme-colour-light-mode);
-    }
-
+    .nav-menu-btn:has(input:checked)::before,
     .nav-menu-btn:has(input:checked)::after {
         background-color: var(--theme-colour-light-mode);
     }
@@ -86,10 +83,7 @@
         background-color: var(--background-dark);
     }
 
-    .nav-menu-btn:has(input:checked)::before {
-        background-color: var(--theme-colour-dark-mode);
-    }
-
+    .nav-menu-btn:has(input:checked)::before,
     .nav-menu-btn:has(input:checked)::after {
         background-color: var(--theme-colour-dark-mode);
     }

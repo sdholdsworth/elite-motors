@@ -19,7 +19,7 @@ export const Header = ({ isDark, setIsDark }) => {
             </div>
             <MyGarage />
             <LoginStatus isDark={isDark} />
-            <NavMenuBtn />
+            <NavMenuBtn isDark={isDark} />
             <NavSidebar isDark={isDark} setIsDark={setIsDark} />       
         </header>
     )
