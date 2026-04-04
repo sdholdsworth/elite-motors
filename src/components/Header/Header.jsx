@@ -7,8 +7,12 @@ import { NavMenuBtn } from '../NavMenuBtn/NavMenuBtn'
 import { NavSidebar } from '../NavSidebar/NavSidebar'
 import './Header.css'
 import '../../App'
+import useWindowWidth from '../../custom-hooks/useWindowWidth/useWindowWidth'
 
 export const Header = ({ isDark, setIsDark }) => {
+
+    const windowWidth = useWindowWidth();
+
     return (   
         <header>
             <div id="header-company-wrapper">
@@ -17,10 +21,10 @@ export const Header = ({ isDark, setIsDark }) => {
                 </Link>
                 <img id="header-company-name" src={projectTitle} alt="elite motors"></img>
             </div>
-            <MyGarage />
-            <LoginStatus isDark={isDark} />
-            <NavMenuBtn isDark={isDark} />
-            <NavSidebar isDark={isDark} setIsDark={setIsDark} />       
+            {windowWidth >= 640 ? <MyGarage /> : null }
+            {windowWidth >= 640 ? <LoginStatus isDark={isDark} /> : null }
+            {windowWidth < 640 ? <NavMenuBtn isDark={isDark} /> : null }
+            {windowWidth < 640 ? <NavSidebar isDark={isDark} setIsDark={setIsDark} /> : null }       
         </header>
     )
 }

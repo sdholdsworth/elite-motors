@@ -14,10 +14,6 @@
     color: var(--text-dark);
 }
 
-.login-status.hidden {
-    display: none;
-}
-
 .login-status #not-logged-in {
     display: flex;
     flex-direction: column;

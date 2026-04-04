@@ -15,10 +15,6 @@
     border-right: 1px solid var(--border-dark);
 }
 
-.my-garage.hidden {
-    display: none;
-}
-
 .my-garage a {
     display: flex;
     flex-direction: column;

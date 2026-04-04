@@ -15,73 +15,62 @@ import { Page_Contact } from './components/Page_Contact/Page_Contact'
 import { Page_MyGarage } from './components/Page_MyGarage/Page_MyGarage'
 import { Page_Login } from './components/Page_Login/Page_Login'
 import { Page_Register } from './components/Page_Register/Page_Register'
+import useWindowWidth from './custom-hooks/useWindowWidth/useWindowWidth'
 
 const App = () => {  
 
-  const configureResponsiveSiteLayout = () => {
-    
-    const headerMyGarage = document.querySelector("#my-garage");
-    const headerLoginStatus = document.querySelector("#login-status"); 
-    const headerNavMenuBtn = document.querySelector("#nav-menu-btn");
-    const headerNavMenuBtnInput = document.querySelector("#nav-menu-btn input");
-    const navSideBar = document.querySelector("#navbar-side");
-    const navBar = document.querySelector("#navbar");
-    const mainContentArea = document.querySelector("main");
-    const body = document.querySelector("body");
-    
-    const headerHeight = document.querySelector("header").offsetHeight;
-    const navBarHeight = document.querySelector("#navbar").offsetHeight;
-    const footerHeight = document.querySelector("footer").offsetHeight;
+  const windowWidth = useWindowWidth();
+  
+  const responsiveLayoutConfig = () => {
 
-    if (window.innerWidth < 640) {
-        headerMyGarage.classList.add("hidden");
-        headerLoginStatus.classList.add("hidden");
-        headerNavMenuBtn.classList.remove("hidden");
-        navBar.classList.add("hidden");
-        mainContentArea.style.minHeight = `calc(100dvh - ${headerHeight}px - ${footerHeight}px)`;
-    } else {
-        headerMyGarage.classList.remove("hidden");
-        headerLoginStatus.classList.remove("hidden");
-        headerNavMenuBtn.classList.add("hidden");
-        navBar.classList.remove("hidden");
-        navSideBar.classList.add("hidden");
-        mainContentArea.style.minHeight = `calc(100dvh - ${headerHeight}px - ${navBarHeight}px - ${footerHeight}px)`;
+  const headerNavMenuBtnInput = document.querySelector("#nav-menu-btn input");
+  const navBar = document.querySelector("#navbar");
+  const mainContentArea = document.querySelector("main");
+  const body = document.querySelector("body");
+  const headerHeight = document.querySelector("header").offsetHeight;
+  const footerHeight = document.querySelector("footer").offsetHeight;
+  let navBarHeight;
 
-        if(headerNavMenuBtnInput.checked) {
-          headerNavMenuBtnInput.checked = false;
-        }
+  if (navBar) {
+    navBarHeight = document.querySelector("#navbar").offsetHeight;
+  }
+  
+  if (windowWidth < 640) {
+      mainContentArea.style.minHeight = `calc(100dvh - ${headerHeight}px - ${footerHeight}px)`;
+  } else {
+      mainContentArea.style.minHeight = `calc(100dvh - ${headerHeight}px - ${navBarHeight}px - ${footerHeight}px)`;
+      navBar.style.top = `calc(0px + ${headerHeight}px)`;
 
-        if(body.classList.contains("prevent-scroll")) {
-          body.classList.remove("prevent-scroll")
-        }
+      if(headerNavMenuBtnInput && headerNavMenuBtnInput.checked) {
+        headerNavMenuBtnInput.checked = false;
       }
+
+      if(body.classList.contains("prevent-scroll")) {
+        body.classList.remove("prevent-scroll")
+      }
+    }
   }
 
-  //determine layout on resize
-  window.onresize = () => {
-    configureResponsiveSiteLayout();
-  };
-
-  //determine layout on load
   window.onload = () => {
-    configureResponsiveSiteLayout();
+    responsiveLayoutConfig();
   };
 
-  //determine the offset position of the sticky navbar on scroll 
+  window.onresize = () => {
+    responsiveLayoutConfig();
+  };
+  
   window.onscroll = () => {
-    const headerHeight = document.querySelector("header").offsetHeight;
-    const navBar = document.querySelector("#navbar");
-    navBar.style.top = `calc(0px + ${headerHeight}px)`;
+    responsiveLayoutConfig();
   }
 
   const pefersColourSchemeDefault = window.matchMedia("(prefers-color-scheme: light)").matches;
   const [isDark, setIsDark] = useLocalStorage("isDark", pefersColourSchemeDefault);
 
   return (
-    <div id="app" data-theme={isDark ? "dark" : "light"}>
+    <div id="app" data-theme={isDark ? "dark" : "light"} >
       <SkipToContent isDark={isDark} />
-      <Header isDark={isDark} setIsDark={setIsDark} />
-      <Navbar isDark={isDark} setIsDark={setIsDark} />
+      <Header isDark={isDark} setIsDark={setIsDark}/>
+      {windowWidth >= 640 ? <Navbar isDark={isDark} setIsDark={setIsDark} /> : null }
       <main>
         <Routes>
           <Route index element={<Page_Home isDark={isDark} />} />
