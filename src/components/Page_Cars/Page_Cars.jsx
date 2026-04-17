@@ -19,7 +19,7 @@ export const Page_Cars = ({isDark}) => {
             <hr></hr>
             <section id="carsForSale">                
             {cars.map((car) => 
-                <article key={car.id.toString()} className="vehicle-card" tabIndex={0}>
+                <article key={car.id.toString()} className="vehicle-card" tabIndex={0} role="article">
                     <h2 className="vehicle-card-heading">{`${car.make} ${car.model} (${car.year})`}</h2>
                     <p><span className="vehicle-card-attribute">Make:</span> {car.make}</p>
                     <p><span className="vehicle-card-attribute">Model:</span> {car.model}</p>
@@ -48,16 +48,16 @@ export const Page_Cars = ({isDark}) => {
                         <p><span className="vehicle-card-attribute">Reverse Camera Assist:</span> {car.modCons.reverseCameraAssist ? "yes" : "no" }</p>
                     </details>
                     <aside className="vehicle-card-gallery">
-                        <img src={car.images?.image1} alt="" className="vehicle-card-image"></img>
-                        <img src={car.images?.image2} alt="" className="vehicle-card-image"></img>
-                        <img src={car.images?.image3} alt="" className="vehicle-card-image"></img>
-                        <img src={car.images?.image4} alt="" className="vehicle-card-image"></img>
-                        <img src={car.images?.image5} alt="" className="vehicle-card-image"></img>
-                        <img src={car.images?.image6} alt="" className="vehicle-card-image"></img>
-                        <img src={car.images?.image7} alt="" className="vehicle-card-image"></img>
-                        <img src={car.images?.image8} alt="" className="vehicle-card-image"></img>
-                        <img src={car.images?.image9} alt="" className="vehicle-card-image"></img>
-                        <img src={car.images?.image10} alt="" className="vehicle-card-image"></img>
+                        {car.images?.image1 ? <img src={car.images.image1} alt="" className="vehicle-card-image"></img> : null}
+                        {car.images?.image2 ? <img src={car.images.image2} alt="" className="vehicle-card-image"></img> : null}
+                        {car.images?.image3 ? <img src={car.images.image3} alt="" className="vehicle-card-image"></img> : null}
+                        {car.images?.image4 ? <img src={car.images.image4} alt="" className="vehicle-card-image"></img> : null}
+                        {car.images?.image5 ? <img src={car.images.image5} alt="" className="vehicle-card-image"></img> : null}
+                        {car.images?.image6 ? <img src={car.images.image6} alt="" className="vehicle-card-image"></img> : null}
+                        {car.images?.image7 ? <img src={car.images.image7} alt="" className="vehicle-card-image"></img> : null}
+                        {car.images?.image8 ? <img src={car.images.image8} alt="" className="vehicle-card-image"></img> : null}
+                        {car.images?.image9 ? <img src={car.images.image9} alt="" className="vehicle-card-image"></img> : null}
+                        {car.images?.image10 ? <img src={car.images.image10} alt="" className="vehicle-card-image"></img> : null}
                     </aside>
                 </article>
             )}
