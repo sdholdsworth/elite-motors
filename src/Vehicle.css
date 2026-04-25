@@ -1,37 +1,63 @@
 .vehicle-card {
     display: grid;
+    grid-template-areas: "vehicle-card-heading"
+                         "vehicle-card-main-info-container" 
+                         "vehicle-card-gallery-wrapper";
     margin: 2em 0;
     padding: 1em;
     border-radius: 1.5em;  
 }
 
-.vehicle-card:hover {
-    cursor: pointer;
-}
-
 .vehicle-card-heading {
+    grid-area: vehicle-card-heading;
     padding: .125em 0;
 }
 
+.vechicle-card-main-info-container {
+    display: grid;
+    grid-template-areas: "vehicle-card-main-info" 
+                         "vehicle-card-modcons";
+    grid-auto-columns: max-content;
+}
+
+.vehicle-card-main-info {
+    grid-area: vehicle-card-main-info;
+}
+
+.vehicle-card-modcons {
+    grid-area: vehicle-card-modcons;
+}
+
+.vehicle-card-gallery-wrapper {
+    grid-area: vehicle-card-gallery-wrapper;
+}
+
 .vehicle-card-gallery {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: "vehicle-card-image";
+    gap: .25em;
+    justify-content: space-evenly;
     margin-top: 1em;
 }
 
 .vehicle-card-image {
+    width: 100%;
     border-radius: .25em;
 }
 
-.vehicle-card-image:not(:last-of-type) {
-    margin-bottom: .5em;
+.vehicle-card-image.thumbnail {
+    width: 300px;
+    height: 180px;
 }
 
+.vehicle-card-image.thumbnail:hover {
+    cursor: pointer;
+}
 
 #app[data-theme="light"]  {
 
     .vehicle-card {
-        border: 4px outset var(--theme-colour-light-mode);
+        border: 3px outset var(--theme-colour-light-mode);
         box-shadow: 0 0 .45em var(--border-dark);
         background-color: var(--background-light);
         transition: background-color var(--animation-timing-slower)
@@ -51,7 +77,7 @@
 #app[data-theme="dark"]  {
 
     .vehicle-card {
-        border: 4px outset var(--theme-colour-dark-mode);
+        border: 3px outset var(--theme-colour-dark-mode);
         box-shadow: 0 0 .45em var(--border-light);
         background-color: var(--background-dark);
         transition: background-color var(--animation-timing-slower)
@@ -68,29 +94,97 @@
     }
 }
 
+/* xs breakpoint */
+@media (min-width: 425px) {
+  .vehicle-card-image.thumbnail {
+        width: 350px;
+        height: 210px;
+    }
+}
+
+/* sm breakpoint */
 @media (min-width: 640px) { 
     .vehicle-card {
+        grid-template-areas: "vehicle-card-heading"
+                             "vehicle-card-main-info-container" 
+                             "vehicle-card-gallery-wrapper vehicle-card-gallery-wrapper";
         padding: 1.5em;
     }
-} 
 
+    .vechicle-card-main-info-container {
+        grid-template-areas: "vehicle-card-main-info vehicle-card-modcons";
+        column-gap: 4em;
+    }
+
+    .vehicle-card-gallery {
+        grid-template-areas: "vehicle-card-image vehicle-card-image";
+        gap: 1em;
+    }
+
+    .vehicle-card-image.thumbnail {
+        width: 240px;
+        height: 180px;
+    }
+}
+
+/* md breakpoint */
 @media (min-width: 768px) {
     .vehicle-card {
         padding: 1.75em;
     }
-} 
 
+    #app[data-theme="light"]  {
+
+        .vehicle-card {
+            border: 4px outset var(--theme-colour-light-mode);
+        }
+    }
+
+    #app[data-theme="dark"]  {
+
+        .vehicle-card {
+            border: 4px outset var(--theme-colour-dark-mode);
+        }
+    }
+
+    .vehicle-card-gallery {
+        grid-template-areas: "vehicle-card-image vehicle-card-image vehicle-card-image";
+    }
+
+    .vehicle-card-image.thumbnail {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+/* lg breakpoint */
 @media (min-width: 1024px) {
     .vehicle-card {
         padding: 2em;
     }
 
     .vehicle-card-gallery {
-        flex-direction: row; 
-        width: inherit;
+        grid-template-areas: "vehicle-card-image vehicle-card-image vehicle-card-image vehicle-card-image";
     }
 
-    .vehicle-card-image {
+    .vehicle-card-image.thumbnail {
         width: 240px;
-    } 
+        height: 150px;
+    }
+}
+
+/* xl breakpoint */
+@media (min-width: 1280px) {
+    .vehicle-card-image.thumbnail {
+        width: 240px;
+        height: 160px;
+    }
+}
+
+/* 2xl breakpoint */
+@media (min-width: 1536px) {
+    .vehicle-card-image.thumbnail {
+        width: 270px;
+        height: 190px;
+    }
 }
