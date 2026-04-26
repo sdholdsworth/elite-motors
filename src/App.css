@@ -229,12 +229,20 @@ hr {
   #root main {
     padding: 1em 3em 3em;
   }
+
+  hr {
+    margin-bottom: 3em;
+  }
 }
 
 /* lg breakpoint */
 @media (min-width: 1024px) {
   #root main {
     padding: 2em 10vw 3em;
+  }
+
+  hr {
+    margin-bottom: 4em;
   }
 
   h1 {
