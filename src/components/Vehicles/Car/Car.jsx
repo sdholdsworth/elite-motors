@@ -10,13 +10,13 @@ export const Car = ({id, ...car}) => {
                             <p><span className="vehicle-card-attribute">Make:</span> {car.make}</p>
                             <p><span className="vehicle-card-attribute">Model:</span> {car.model}</p>
                             <p><span className="vehicle-card-attribute">Colour:</span> {car.colour.toLowerCase()}</p>
-                            <p><span className="vehicle-card-attribute">Engine:</span> {car.engine}</p>
+                            <p><span className="vehicle-card-attribute">Engine:</span> {car.engine > 0 ? car.engine.toFixed(1) : "N/A"}</p>
                             <p><span className="vehicle-card-attribute">Engine Type:</span> {car.engineType.toLowerCase()}</p>
-                            <p className="vehicle-mileage"><span className="vehicle-card-attribute">Mileage:</span> {car.mileage.toLocaleString("en-GB")}</p>
+                            <p><span className="vehicle-card-attribute">Mileage:</span> {car.mileage.toLocaleString("en-GB")}</p>
                             <p><span className="vehicle-card-attribute">Transmission:</span> {car.transmission.toLowerCase()}</p>
                             <p><span className="vehicle-card-attribute">Year:</span> {car.year}</p>
                             <p><span className="vehicle-card-attribute">Service History:</span> {car.serviceHistory.toLowerCase()}</p>
-                            <p className="vehicle-price"><span className="vehicle-card-attribute">Price:</span> £{car.price.toLocaleString("en-GB")}</p>
+                            <p><span className="vehicle-card-attribute">Price:</span> £{car.price.toLocaleString("en-GB")}</p>
                             <p><span className="vehicle-card-attribute">Reference No:</span> {car.refNo}</p>
                         </div>
                         <details className="vehicle-card-modcons">
