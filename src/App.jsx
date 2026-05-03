@@ -1,5 +1,6 @@
 import './App.css'
 import { Routes, Route } from 'react-router'
+import smoothscroll from 'smoothscroll-polyfill'
 import useLocalStorage from 'use-local-storage'
 import { SkipToContent } from './components/SkipToContent/SkipToContent'
 import { Header } from './components/Header/Header'
@@ -16,6 +17,9 @@ import { Page_MyGarage } from './components/Page_MyGarage/Page_MyGarage'
 import { Page_Login } from './components/Page_Login/Page_Login'
 import { Page_Register } from './components/Page_Register/Page_Register'
 import useWindowWidth from './custom-hooks/useWindowWidth/useWindowWidth'
+
+//initiate polyfill for smooth scroll (cross-browser smooth scroll behaviour fix)
+smoothscroll.polyfill();
 
 const App = () => {  
 
