@@ -26,12 +26,12 @@ header #headerCompanyWrapper {
   flex-direction: row;
 }
 
-header #headerCompanyHomelink {
+header #headerCompanyHomeLink {
   grid-area: homelink;
   width: max-content;
 }
 
-header #headerCompanyHomelink #headerWheelLogo {
+header #headerCompanyHomeLink #headerWheelLogo {
   width: 4rem;
 }
 
@@ -51,7 +51,7 @@ header .nav-menu-btn {
 /* xs breakpoint */
 @media (min-width: 425px) {
   header #headerCompanyName {  
-  width: 18rem;
+    width: 18rem;
   }
 }
 
@@ -61,7 +61,7 @@ header .nav-menu-btn {
     grid-template-areas: "homelink title title title my-garage login-status";
   }
 
-   header #headerCompanyHomelink #headerWheelLogo {
+   header #headerCompanyHomeLink #headerWheelLogo {
     width: 5rem;
   }
 
@@ -84,7 +84,7 @@ header .nav-menu-btn {
 
 /* md breakpoint */
 @media (min-width: 768px) {
-  header #headerCompanyHomelink #headerWheelLogo {
+  header #headerCompanyHomeLink #headerWheelLogo {
     width: 6rem;
   }
 
@@ -95,7 +95,7 @@ header .nav-menu-btn {
 
 /* lg breakpoint */
 @media (min-width: 1024px) { 
-  header #headerCompanyHomelink #headerWheelLogo {
+  header #headerCompanyHomeLink #headerWheelLogo {
     width: 8rem;
   }
 
