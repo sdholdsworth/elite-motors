@@ -1,3 +1,4 @@
+import './preflight.css';
 import './App.css'
 import { Routes, Route } from 'react-router'
 import smoothscroll from 'smoothscroll-polyfill'
