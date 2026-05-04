@@ -1,3 +1,9 @@
+#socialMediaLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 #socialMediaLinks a {
     width: 3.125rem;
     opacity: 1;

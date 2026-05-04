@@ -45,7 +45,7 @@ export const NavSidebar = ({ isDark, setIsDark }) => {
             <div className="navbar-side-theme-toggle-wrapper">
                 <ThemeToggle isChecked={isDark} handleThemeToggle={() => setIsDark(!isDark)} />
             </div>
-            <nav id="navbarSideMainNav" className="p-1">
+            <nav id="navbarSideMainNav">
                 <ul>
                     <li className="nav-sidebar-link-item"><NavLink to="/" onClick={closeNavSidebar}>Home</NavLink></li>
                     <li className="nav-sidebar-link-item"><NavLink to="/cars" onClick={closeNavSidebar}>Cars</NavLink></li>

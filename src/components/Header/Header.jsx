@@ -16,8 +16,8 @@ export const Header = ({ isDark, setIsDark }) => {
     return (   
         <header>
             <div id="headerCompanyWrapper">
-                <Link id="headerCompanyHomeLink" to="/" className="flex flex-row">
-                    <img id="headerWheelLogo" src={wheelLogo} className="" alt="link to homepage"></img>
+                <Link id="headerCompanyHomeLink" to="/">
+                    <img id="headerWheelLogo" src={wheelLogo} alt="link to homepage"></img>
                 </Link>
                 <img id="headerCompanyName" src={projectTitle} alt="elite motors"></img>
             </div>

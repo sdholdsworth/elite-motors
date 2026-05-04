@@ -112,6 +112,7 @@
 
 #navbarSideMainNav {
     grid-area: navbar-side-main-nav;
+    padding: 0.25em;
 }
 
 .nav-sidebar-link-item {
