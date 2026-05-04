@@ -15,11 +15,11 @@ export const Header = ({ isDark, setIsDark }) => {
 
     return (   
         <header>
-            <div id="header-company-wrapper">
-                <Link id="header-company-homelink" to="/" className="flex flex-row">
-                    <img id="header-wheel-logo" src={wheelLogo} className="" alt="link to homepage"></img>
+            <div id="headerCompanyWrapper">
+                <Link id="headerCompanyHomelink" to="/" className="flex flex-row">
+                    <img id="headerWheelLogo" src={wheelLogo} className="" alt="link to homepage"></img>
                 </Link>
-                <img id="header-company-name" src={projectTitle} alt="elite motors"></img>
+                <img id="headerCompanyName" src={projectTitle} alt="elite motors"></img>
             </div>
             {windowWidth >= 640 ? <MyGarage /> : null }
             {windowWidth >= 640 ? <LoginStatus isDark={isDark} /> : null }

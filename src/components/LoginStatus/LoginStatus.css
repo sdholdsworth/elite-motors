@@ -14,42 +14,42 @@
     color: var(--text-dark);
 }
 
-.login-status #not-logged-in {
+.login-status #notLoggedIn {
     display: flex;
     flex-direction: column;
     width: max-content;
 }
 
-.login-status #not-logged-in p:first-of-type {
+.login-status #notLoggedIn p:first-of-type {
     margin-bottom: .75rem;
 }
 
-.login-status #not-logged-in.hidden {
+.login-status #notLoggedIn.hidden {
     display: none;
 }
 
-.login-status #logged-in {
+.login-status #loggedIn {
     display: flex;
     width: max-content;
 }
 
-.login-status #logged-in.hidden {
+.login-status #loggedIn.hidden {
     display: none;
 }
 
-.login-status #not-logged-in a,
-.login-status #logged-in a {
+.login-status #notLoggedIn a,
+.login-status #loggedIn a {
     display: flex;   
     flex-direction: row; 
     column-gap: .5rem;
 }
 
-.login-status #not-logged-in img,
-.login-status #logged-in img {
+.login-status #notLoggedIn img,
+.login-status #loggedIn img {
     width: 1.625rem;
 }
 
-.login-status #logged-in.hidden {
+.login-status #loggedIn.hidden {
     display: none;
 }
 

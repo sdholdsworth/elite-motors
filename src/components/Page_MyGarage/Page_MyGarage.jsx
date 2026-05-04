@@ -13,7 +13,7 @@ export const Page_MyGarage = ({isDark}) => {
         <>
             <MainPageHeading isDark={isDark} pageHeadingIconDarkMode={iconDarkMode} pageHeadingIconLightMode={iconLightMode} pageHeading={heading} pageHeadingSubContext={headingSubContext}/>
 
-            <section id="main-page-content">
+            <section id="mainPageContent">
                 <h2>MY GARAGE page component</h2>
             </section>
         </>

@@ -4,7 +4,7 @@ export const NavMenuBtn = () => {
 
     const handleShowHideSidebarNavigation = () => {
         
-        const navbarSide = document.querySelector("#navbar-side");
+        const navbarSide = document.querySelector("#navbarSide");
         const body = document.querySelector("body");
         
         if(navbarSide.classList.contains("hidden")) {
@@ -19,8 +19,9 @@ export const NavMenuBtn = () => {
     }
 
     return (
-        <label id="nav-menu-btn" className="nav-menu-btn" onChange={handleShowHideSidebarNavigation}>   
-            <input type="checkbox"/>
+  
+        <label htmlFor="navMenuBtn" className="nav-menu-btn" onChange={handleShowHideSidebarNavigation}>   
+            <input id="navMenuBtn" type="checkbox" aria-label="navigation menu button" />
         </label>
     )
 }

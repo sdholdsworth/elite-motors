@@ -11,11 +11,11 @@ footer p {
 #app[data-theme="light"] footer {
   background-color: var(--theme-colour-light-mode);
   color: var(--text-light);
-  transition: background-color var(--animation-timing-slower), color var(--animation-timing-slower);
+  transition: background-color var(--animation-timing-slower);
 }
 
 #app[data-theme="dark"] footer {
   background-color: var(--theme-colour-dark-mode);
   color: var(--text-dark);
-  transition: background-color var(--animation-timing-slower), color var(--animation-timing-slower);
+  transition: background-color var(--animation-timing-slower);
 }

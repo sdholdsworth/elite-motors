@@ -21,26 +21,26 @@ header {
   transition: background-color var(--animation-timing-slower), color var(--animation-timing-slower), border-bottom var(--animation-timing-slower);
 }
 
-header #header-company-wrapper {
+header #headerCompanyWrapper {
   display: flex;
   flex-direction: row;
 }
 
-header #header-company-homelink {
+header #headerCompanyHomelink {
   grid-area: homelink;
   width: max-content;
 }
 
-header #header-company-homelink #header-wheel-logo {
+header #headerCompanyHomelink #headerWheelLogo {
   width: 4rem;
 }
 
-header #header-company-name {
+header #headerCompanyName {
   grid-area: title;
   width: 12.5rem;
 }
 
-header #nav-menu-btn {
+header .nav-menu-btn {
   grid-area: nav-menu-btn;
   width: max-content;
   align-self: center;
@@ -50,32 +50,32 @@ header #nav-menu-btn {
 
 /* xs breakpoint */
 @media (min-width: 425px) {
-  header #header-company-name {  
+  header #headerCompanyName {  
   width: 18rem;
   }
 }
 
 /* sm breakpoint */
 @media (min-width: 640px) {
-   header {
+  header {
     grid-template-areas: "homelink title title title my-garage login-status";
-   }
+  }
 
-   header #header-company-homelink #header-wheel-logo {
+   header #headerCompanyHomelink #headerWheelLogo {
     width: 5rem;
   }
 
-  header #header-company-name {
+  header #headerCompanyName {
     width: 20.5rem;
   }
 
-  header #my-garage {
+  header #myGarage {
     grid-area: my-garage;
     height: -webkit-fill-available;
     justify-content: center;
   }
 
-  header #login-status {
+  header #loginStatus {
     grid-area: login-status;
     height: -webkit-fill-available;
     justify-content: center;
@@ -84,22 +84,22 @@ header #nav-menu-btn {
 
 /* md breakpoint */
 @media (min-width: 768px) {
-  header #header-company-homelink #header-wheel-logo {
+  header #headerCompanyHomelink #headerWheelLogo {
     width: 6rem;
   }
 
-  header #header-company-name {
+  header #headerCompanyName {
     width: 26rem;
   }
 }
 
 /* lg breakpoint */
 @media (min-width: 1024px) { 
-  header #header-company-homelink #header-wheel-logo {
+  header #headerCompanyHomelink #headerWheelLogo {
     width: 8rem;
   }
 
-  header #header-company-name {
+  header #headerCompanyName {
     width: 34rem;
   }
 }

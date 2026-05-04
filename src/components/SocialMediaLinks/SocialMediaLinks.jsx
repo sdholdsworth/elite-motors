@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 
 export const SocialMediaLinks = () => {
     return (
-        <div id="social-media-links" className="flex flex-row justify-between">
+        <div id="socialMediaLinks" className="flex flex-row justify-between">
             <Link to="#facebook" rel="noopener noreferrer" onClick={e => e.preventDefault}>
                 <img src="../src/assets/social/social-facebook.svg" alt="Facebook" />
             </Link>

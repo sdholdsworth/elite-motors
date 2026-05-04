@@ -39,7 +39,7 @@
     overflow: hidden;
 }
 
-#navbar-side-my-garage-login-status-wrapper {
+#navbarSideMyGarageLoginStatusWrapper {
     display: grid;
     grid-area: navbar-side-my-garage-login-status-wrapper;
     grid-template-areas: "navbar-side-my-garage navbar-side-login-status";
@@ -51,66 +51,66 @@
     align-content: stretch;
 }
 
-#navbar-side-my-garage {
+#navbarSideMyGarage {
     grid-area: navbar-side-my-garage;
 }
 
 
-#navbar-side-my-garage a {
+#navbarSideMyGarage a {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#navbar-side-my-garage p {
+#navbarSideMyGarage p {
     margin-bottom: .5rem;
 }
 
-#navbar-side-my-garage img {
+#navbarSideMyGarage img {
     max-width: 180px;
 }
 
-#navbar-side-login-status {
+#navbarSideLoginStatus {
     grid-area: navbar-side-login-status;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-#navbar-side-not-logged-in,
-#navbar-side-logged-in {
+#navbarSideNotLoggedIn,
+#navbarSideLoggedIn {
     width: max-content;
 }
 
-#navbar-side-not-logged-in p:first-of-type {
+#navbarSideNotLoggedIn p:first-of-type {
     margin-bottom: 1rem;
 }
 
-#navbar-side-not-logged-in a,
-#navbar-side-logged-in a {
+#navbarSideNotLoggedIn a,
+#navbarSideLoggedIn a {
     display: flex;   
     flex-direction: row; 
     column-gap: .5rem;
 }
 
-#navbar-side-not-logged-in img,
-#navbar-side-logged-in img {
+#navbarSideNotLoggedIn img,
+#navbarSideLoggedIn img {
     width: 1.735rem;
 }
 
-#navbar-side .navbar-side-theme-toggle-wrapper {
+#navbarSide .navbar-side-theme-toggle-wrapper {
     grid-area: nabar-side-toggle-theme;
     width: inherit;
     display: flex;
     justify-content: flex-start;
 }
 
-#navbar-side .navbar-side-theme-toggle-wrapper .theme-toggle-container {
+#navbarSide .navbar-side-theme-toggle-wrapper .theme-toggle-container {
     left: 0;
     transform: translateX(0);
 }
 
-#navbar-side-main-nav {
+#navbarSideMainNav {
     grid-area: navbar-side-main-nav;
 }
 

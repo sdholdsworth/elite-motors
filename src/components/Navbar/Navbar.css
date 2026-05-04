@@ -24,18 +24,18 @@
   display: none;
 }
 
-.navbar-wrapper #main-nav {
+.navbar-wrapper #mainNav {
   grid-area: main-nav;
 }
 
-.navbar-wrapper #main-nav ul {
+.navbar-wrapper #mainNav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
 }
 
-.navbar-wrapper #main-nav ul li a {
+.navbar-wrapper #mainNav ul li a {
   font-weight: 600;
 }
 

@@ -13,7 +13,7 @@ export const Page_Login = ({isDark}) => {
         <>
             <MainPageHeading isDark={isDark} pageHeadingIconDarkMode={iconDarkMode} pageHeadingIconLightMode={iconLightMode} pageHeading={heading} pageHeadingSubContext={headingSubContext}/>
 
-            <section id="main-page-content">
+            <section id="mainPageContent">
                 <h2>LOGIN page component</h2>
             </section>
         </>

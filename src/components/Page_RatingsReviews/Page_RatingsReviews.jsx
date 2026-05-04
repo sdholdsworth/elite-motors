@@ -13,7 +13,7 @@ export const Page_RatingsReviews = ({isDark}) => {
         <>
             <MainPageHeading isDark={isDark} pageHeadingIconDarkMode={iconDarkMode} pageHeadingIconLightMode={iconLightMode} pageHeading={heading} pageHeadingSubContext={headingSubContext}/>
 
-            <section id="main-page-content">
+            <section id="mainPageContent">
                 <h2>RATINGS AND REVIEWS page component</h2>
             </section>
         </>

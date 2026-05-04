@@ -6,7 +6,7 @@ import '../../App'
 export const Navbar = ({isDark, setIsDark}) => {
     return (
         <div id="navbar" className="navbar-wrapper">
-            <nav id="main-nav">
+            <nav id="mainNav">
                 <ul>
                     <li className="nav-link-item"><NavLink to="/">Home</NavLink></li>
                     <li className="nav-link-item"><NavLink to="/cars">Cars</NavLink></li>

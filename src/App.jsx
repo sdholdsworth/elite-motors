@@ -27,7 +27,7 @@ const App = () => {
   
   const responsiveLayoutConfig = () => {
 
-  const headerNavMenuBtnInput = document.querySelector("#nav-menu-btn input");
+  const headerNavMenuBtnInput = document.querySelector(".nav-menu-btn input");
   const navBar = document.querySelector("#navbar");
   const mainContentArea = document.querySelector("main");
   const body = document.querySelector("body");

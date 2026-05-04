@@ -10,12 +10,12 @@ export const LoginStatus = ({ isDark }) => {
     const registerIconLightMode = "src/assets/header-register-icon-light-mode.png";
 
     return (
-        <div id="login-status" className="login-status">
-            <div id="not-logged-in">
+        <div id="loginStatus" className="login-status">
+            <div id="notLoggedIn">
                 <p><Link to="/login"><img src={isDark ? `${userIconDarkMode}` : `${userIconLightMode}`} alt=""/>Login</Link></p>
                 <p><Link to="/register"><img src={isDark ? `${registerIconDarkMode}` : `${registerIconLightMode}`} alt=""/>Register</Link></p>
             </div>
-            <div id="logged-in" className="hidden">
+            <div id="loggedIn" className="hidden">
                 <p><Link to="/"><img src={isDark ? `${userIconDarkMode}` : `${userIconLightMode}`} alt=""/>Sign Out</Link></p>
             </div>
         </div>

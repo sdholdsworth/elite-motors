@@ -12,7 +12,7 @@ export const NavSidebar = ({ isDark, setIsDark }) => {
     
 
     const closeNavSidebar = () => {
-        const navMenu = document.querySelector("#nav-menu-btn input");
+        const navMenu = document.querySelector(".nav-menu-btn input");
         const navbarSide = document.querySelector("#navbar-side");
         const body = document.querySelector("body");
 
@@ -24,20 +24,20 @@ export const NavSidebar = ({ isDark, setIsDark }) => {
     }
 
     return (
-        <aside id="navbar-side" className="navbar-side hidden">
-            <div id="navbar-side-my-garage-login-status-wrapper">
-                <div id="navbar-side-my-garage">
+        <aside id="navbarSide" className="navbar-side hidden">
+            <div id="navbarSideMyGarageLoginStatusWrapper">
+                <div id="navbarSideMyGarage">
                     <Link to="/my-garage" onClick={closeNavSidebar}>
                         <p>My Garage</p>
                         <img src="/src/assets/my-garage-icon.svg" alt="" />
                     </Link>
                 </div>
-                <div id="navbar-side-login-status">
-                    <div id="navbar-side-not-logged-in">
+                <div id="navbarSideLoginStatus">
+                    <div id="navbarSideNotLoggedIn">
                         <p><Link to="/login" onClick={closeNavSidebar}><img src={isDark ? `${userIconDarkMode}` : `${userIconLightMode}` } alt=""/>Login</Link></p>
                         <p><Link to="/register" onClick={closeNavSidebar}><img src={isDark ? `${registerIconDarkMode}` : `${registerIconLightMode}` } alt=""/>Register</Link></p>
                     </div>
-                    <div id="navbar-side-logged-in" className="hidden">
+                    <div id="navbarSideLoggedIn" className="hidden">
                         <p><Link to="/" onClick={closeNavSidebar}><img src={isDark ? `${userIconDarkMode}` : `${userIconLightMode}`} alt=""/>Sign Out</Link></p>
                     </div>
                 </div>   
@@ -45,7 +45,7 @@ export const NavSidebar = ({ isDark, setIsDark }) => {
             <div className="navbar-side-theme-toggle-wrapper">
                 <ThemeToggle isChecked={isDark} handleThemeToggle={() => setIsDark(!isDark)} />
             </div>
-            <nav id="navbar-side-main-nav" className="p-1">
+            <nav id="navbarSideMainNav" className="p-1">
                 <ul>
                     <li className="nav-sidebar-link-item"><NavLink to="/" onClick={closeNavSidebar}>Home</NavLink></li>
                     <li className="nav-sidebar-link-item"><NavLink to="/cars" onClick={closeNavSidebar}>Cars</NavLink></li>

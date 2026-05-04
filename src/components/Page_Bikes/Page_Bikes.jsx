@@ -13,7 +13,7 @@ export const Page_Bikes = ({isDark}) => {
         <>
             <MainPageHeading isDark={isDark} pageHeadingIconDarkMode={iconDarkMode} pageHeadingIconLightMode={iconLightMode} pageHeading={heading} pageHeadingSubContext={headingSubContext}/>
 
-            <section id="main-page-content">
+            <section id="mainPageContent">
                 <h2>BIKES page component</h2>
             </section>
         </>
